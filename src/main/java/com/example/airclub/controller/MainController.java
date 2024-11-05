@@ -1,7 +1,7 @@
-package controller;
+package com.example.airclub.controller;
 
-import dao.UserRepository;
-import entity.User;
+import com.example.airclub.dao.UserRepository;
+import com.example.airclub.entity.User;
 import org.springframework.web.bind.annotation.*;
 
 @RestController // This means that this class is a Controller
