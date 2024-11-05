@@ -1,4 +1,4 @@
-package entity;
+package com.example.airclub.entity;
 
 
 import javax.persistence.*;
@@ -19,6 +19,8 @@ public class User {
     private String address;
     private int roleId;
 
+    public User() {
+    }
 
     public void setUid(Long id) {
         this.uid = id;
