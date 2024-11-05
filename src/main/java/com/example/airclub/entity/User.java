@@ -7,26 +7,26 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
 @Entity
-@Table(name = "user")
+@Table(name = "air_user")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long uid;
+    private Integer uid;
     private String name;
     private int phone;
-    private LocalDate birthday;
+    private String birthday;
     private String address;
     private int roleId;
 
     public User() {
     }
 
-    public void setUid(Long id) {
+    public void setUid(Integer id) {
         this.uid = id;
     }
 
-    public Long getUid() {
+    public Integer getUid() {
         return uid;
     }
 
@@ -46,11 +46,11 @@ public class User {
         this.phone = password;
     }
 
-    public LocalDate getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(LocalDate birthday) {
+    public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
 
