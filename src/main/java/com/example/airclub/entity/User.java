@@ -1,7 +1,8 @@
 package com.example.airclub.entity;
 
 
-import javax.persistence.*;
+import jakarta.persistence.*;
+
 import java.time.LocalDate;
 import java.util.Objects;
 import java.util.StringJoiner;

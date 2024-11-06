@@ -2,6 +2,7 @@ package com.example.airclub.controller;
 
 import com.example.airclub.dao.UserRepository;
 import com.example.airclub.entity.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController // This means that this class is a Controller
@@ -9,6 +10,11 @@ import org.springframework.web.bind.annotation.*;
 public class MainController {
 
     private  UserRepository userRepository;
+
+    @Autowired
+    public MainController(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
     @PostMapping(path="/add") // Map ONLY POST Requests
     public String addNewUser () {
